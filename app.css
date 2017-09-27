@@ -1,0 +1,13 @@
+body {
+  margin: 25px;
+  font-family: monospace;
+}
+
+.intro {
+  margin-top: 25px;
+  width: 550px;
+}
+
+a {
+  color: black;
+}
