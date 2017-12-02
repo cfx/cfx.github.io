@@ -1,5 +1,8 @@
-document.addEventListener("DOMContentLoaded", function(e) { 
-  var cnv = document.getElementById('ulams_spiral'),
+document.addEventListener("DOMContentLoaded", function(e) {
+  var ua = navigator.userAgent;
+  if (ua.match(/Mobile/) && ua.match(/Firefox/)) return;
+
+  var cnv = document.createElement('canvas'),
       ctx = cnv.getContext('2d'),
       px = ctx.createImageData(1,1),
       d = px.data,
@@ -41,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 
     x = xx ? x + xx : x;
     y = yy ? y + yy : y;
-  
+
     current.c-=1;
     opposite.c+=1;
 
@@ -62,9 +65,9 @@ document.addEventListener("DOMContentLoaded", function(e) {
       d[2] = 255;
     }
 
-    ctx.putImageData(px, x, y);     
+    ctx.putImageData(px, x, y);
   }
 
-//  isPrime(6)
   while (i < limit) { drawSpiralPx() }
+  document.getElementById('cnv_container').appendChild(cnv);
 });
