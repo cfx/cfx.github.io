@@ -1,24 +1,21 @@
 body {
   margin: 25px;
   font-family: monospace;
-  font-size: 16px;
+  font-size: 15px;
+  line-height: 1.5em;
 }
 
 .intro {
   margin-top: 25px;
-  width: 700px;
+  width: 800px;
 }
 
 a {
   color: black;
 }
 
-@media  (max-width: 550px) {
+@media  (max-width: 800px) {
   .intro {
     width: 100%
   }
 }
-
-  
-
-
